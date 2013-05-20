@@ -1,0 +1,45 @@
+background yes
+update_interval 2
+
+cpu_avg_samples 2
+net_avg_samples 2
+temperature_unit celsius
+
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+
+gap_x 10
+minimum_size 180 750
+maximum_width 500
+own_window yes
+own_window_class Conky
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+border_inner_margin 0
+border_outer_margin 0
+alignment tl
+
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+override_utf8_locale yes
+use_xft yes
+xftfont caviar dreams:size=8
+xftalpha 0.5
+uppercase no
+
+default_color 00AA00
+color1 00DD00
+color2 00AA00
+color3 008800
+color4 00FF00
+
+TEXT
+
+${color4}${font Ubuntu:size=10,weight:bold}Times of India:${hr 2}
+${color}${font Ubuntu:size=9,weight:bold}${execi 300 $HOME/rss_template.py}
+
